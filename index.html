@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#143b30">
+  <title>Christmas Advent Calendar</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./calendar.js" defer></script>
+</head>
+<body>
+  <main class="calendar">
+    <header class="masthead">
+      <div class="crest" aria-hidden="true"><span>✧</span> ❄ <span>✧</span></div>
+      <h1>Christmas Advent Calendar</h1>
+      <p class="edition" id="edition"></p>
+    </header>
+
+    <noscript><p>Enable JavaScript to open your advent calendar.</p></noscript>
+    <ol class="doors" id="doors" aria-label="Advent calendar doors"></ol>
+    <footer class="calendar-footer">
+      <p id="season-message" role="timer"></p>
+    </footer>
+  </main>
+
+  <dialog id="surprise" aria-labelledby="surprise-title">
+    <h2 id="surprise-title"></h2>
+    <div id="qr-frame" class="qr-frame"></div>
+    <p id="surprise-message" role="status"></p>
+    <p id="listening-duration" hidden></p>
+    <details id="piece-details" hidden>
+      <summary>About today's piece</summary>
+      <div id="piece-content"></div>
+    </details>
+    <form method="dialog">
+      <button class="close-button" autofocus>Close</button>
+    </form>
+  </dialog>
+</body>
+</html>
